@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class=" text-white main w-full min-h-screen bg-zinc-900 p-10 ">
+        <a class="text-green-400" href="/">Home Page</a>
+        <h1 class="text-4xl tracking-tighter">
+            <%= filename %>
+        </h1>
+        <p class="text-xl mt-5 font-light">
+           
+        </p>
+        <form action="/edit" method="post">
+            <input class="block w-full outline-none px-5 py-5 bg-zinc-700" type="text" placeholder="Title" name="previous" value="<%=filename%>">
+            <textarea class="block w-full outline-none mt-2 resize-none px-5 py-5 bg-zinc-700" placeholder="Rename file"
+                name="new"></textarea>
+            <input class="mt-2 bg-green-700 px-5 py-2 rounded-md" type="submit" value="Edit Name">
+        </form>
+
+
+    </div>
+</body>
+
+</html>
