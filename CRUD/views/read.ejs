@@ -29,7 +29,7 @@
 
             <% if (users.length > 0) { %>
 
-                <% users.forEach(function(e) { %>
+                <% users.forEach(function(user) { %>
 
                     <!-- User Card -->
                     <div class="user w-72 p-5 bg-zinc-800 rounded-lg">
@@ -38,32 +38,32 @@
                         <div class="w-full h-72 rounded-lg bg-zinc-700">
                             <img 
                                 class="w-full h-full object-cover" 
-                                src="<%= e.image %>" 
+                                src="<%= user.image %>" 
                                 alt="Profile Image"
                             >
                         </div>
 
                         <!-- User Information -->
                         <h3 class="text-xl mt-3 tracking-tighter">
-                            <%= e.name %>
+                            <%= user.name %>
                         </h3>
 
                         <h5 class="text-zinc-500">
-                            <%= e.email %>
+                            <%= user.email %>
                         </h5>
 
                         <!-- Actions -->
                         <div class="flex gap-4 mt-5">
 
                             <a 
-                                href="/edit/<%= e._id %>" 
+                                href="/edit/<%= user._id %>" 
                                 class="text-zinc-400 hover:text-white"
                             >
                                 Edit User
                             </a>
 
                             <a 
-                                href="/delete/<%= e._id %>" 
+                                href="/delete/<%= user._id %>" 
                                 class="text-red-500 hover:text-red-400"
                             >
                                 Delete User
